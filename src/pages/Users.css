@@ -1,0 +1,155 @@
+.users-page {
+  min-height: calc(100vh - 64px - 77px);
+  background: #f6f7fb;
+  padding: 60px 32px 80px;
+}
+
+.users-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.users-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -1.5px;
+  margin: 0 0 10px;
+}
+
+.users-subtitle {
+  font-size: 1rem;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Loading / error state */
+.users-state {
+  display: flex;
+  justify-content: center;
+  padding: 60px 0;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e2e8f0;
+  border-top-color: #3b82f6;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.users-error {
+  color: #ef4444;
+  font-size: 0.95rem;
+}
+
+/* Grid */
+.users-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card */
+.user-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px 24px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.06),
+    0 4px 16px rgba(0, 0, 0, 0.04);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.user-card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.08),
+    0 12px 32px rgba(0, 0, 0, 0.07);
+}
+
+.user-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b82f6, #7c3aed);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  letter-spacing: 0;
+}
+
+.user-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.user-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-username {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  margin: 0 0 14px;
+  font-weight: 500;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.user-detail {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: #475569;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-detail svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  color: #94a3b8;
+}
+
+@media (max-width: 600px) {
+  .users-page {
+    padding: 40px 16px 60px;
+  }
+
+  .users-title {
+    font-size: 1.8rem;
+  }
+}
